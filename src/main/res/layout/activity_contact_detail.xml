@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FB"
+    tools:context=".activity.ContactDetailActivity">
+
+    <!-- 顶部标题栏 -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="通讯录详情"
+        android:titleTextColor="#FFFFFF"
+        app:menu="@menu/menu_detail" />
+
+    <!-- 联系人详情内容 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:backgroundTint="#FFFFFF"
+            android:divider="?android:attr/listDivider"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/tv_detail_name"
+                android:text="张三"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_detail_phone"
+                android:text="📞 电话：13800000001"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_detail_email"
+                android:text="📧 邮箱：zhangsan@example.com"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_detail_birthday"
+                android:text="🎂 生日：1990-01-01"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_detail_address"
+                android:text="🏠 地址：北京市朝阳区"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_detail_note"
+                android:text="📝 备注：老朋友"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

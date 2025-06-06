@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 顶部标题栏 -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:title="通讯录"
+        android:titleTextColor="#FFFFFF" />
+
+    <!-- RecyclerView放在标题栏下面，底部预留fab空间，右边留空给SideIndexBar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/fab_add"
+        android:padding="12dp"
+        android:layout_toLeftOf="@id/sideIndexBar" />
+
+    <!-- 字母索引条，右侧竖直，固定宽度 -->
+    <com.example.easycontacts.widget.SideIndexBar
+        android:id="@+id/sideIndexBar"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/fab_add"
+        android:layout_marginEnd="4dp" />
+
+    <!-- 悬浮按钮，右下角 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="添加联系人"
+        android:src="@android:drawable/ic_input_add" />
+
+</RelativeLayout>
